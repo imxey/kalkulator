@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (value === 'C') {
                 currentInput = '';
                 operator = '';
-                previousInput = '';
+                previousInput = '2';
                 selectedFunction = '';
                 layar.value = '0';
             } else if (value === 'del') {
