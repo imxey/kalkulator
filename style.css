@@ -141,15 +141,10 @@ body{
     
     .btn {
         width: 100%;
-        font-size: 0.8em;
+        font-size: 1em;
         cursor: pointer;
         border: 1px solid black;
         background-color: #f0f0f0;
-    }
-    #note{
-        float: left;
-        flex: 1;
-        font-size: 0.8em;
     }
     #kosong{
         flex: 2;

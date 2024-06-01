@@ -42,7 +42,8 @@ document.addEventListener("DOMContentLoaded", function() {
                             previousInput = 2;
                             currentInput = Math.pow(currentInput, 1 / previousInput);
                         } else if (operator === 'xx') {
-                            currentInput = Math.pow(previousInput, 2);
+                            currentInput = 2;
+                            currentInput = Math.pow(previousInput, currentInput);
                         } else {
                             currentInput = eval(previousInput + operator + currentInput);
                         }
@@ -54,11 +55,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             } else if (value === '+' || value === '-' || value === '*' || value === '/' || value === '^' || value === 'root' || value === 'xx') {
                 if (currentInput !== '') {
-                    previousInput = currentInput;
-                    currentInput = '';
+                    if(value == 'xx'){
+                        previousInput = currentInput;
+                        currentInput = '2';
+                    }
+                    else{
+                        previousInput = currentInput;
+                        currentInput = '';
+                    }
                 }
                 operator = value;
-                layar.value = previousInput;
+                
             } else if (value === 'sin' || value === 'cos' || value === 'tan' || value === 'sqrt') {
                 selectedFunction = value;
                 layar.value = value;
